@@ -30,6 +30,20 @@
             font-size: 15px;
             font-family: Verdana;
         }
+
+        section{
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 2%;
+            font-family: Arial;
+        }
+
+        h1{
+            background-color: #DE3163;
+            color: white;
+            padding: 8px 10px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -43,9 +57,16 @@
     <section>
         <h1><?php
             $pag1 = (isset($_GET['page']) ? $_GET['page'] : 'home');
+            
+            if(!array_key_exists($pag1, $pags)){
+                $pag1 = 'home';
+            }
 
-            print $pag1;
+            echo $pag1;
         ?></h1>
+        <p><?php
+            print $pags[$pag1];
+        ?></p>
     </section>
 </body>
 </html>
