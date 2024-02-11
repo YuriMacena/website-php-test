@@ -1,7 +1,7 @@
 <?php
-    $pags = ['home'=>'Minha página home aqui!', 'about'=>'Estou na página sobre', 'contact'=>''];
+    $pags = ['Home'=>'Minha página home aqui!', 'Sobre'=>'Estou na página sobre', 'Contato'=>''];
 
-    $pags['contact'] = '<form><input type="text" placeholder="Seu nome..." /></form>';
+    $pags['Contato'] = '<form><input type="text" placeholder="Seu nome..." /></form>';
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +19,26 @@
 
         header{
             background-color: #FFBF00;
-            padding: 8px 10px;
+            padding: 10px 10px;
             text-align: center;
+        }
+
+        a{
+            display: inline-block;
+            margin: 0 10px;
+            color: white;
+            font-size: 15px;
+            font-family: Verdana;
         }
     </style>
 </head>
 <body>
     <header>
-
+        <?php
+            foreach ($pags as $key => $value){
+                echo '<a href"?page='.$key.'">'.$key.'</a>';
+            }
+        ?>
     </header>
 </body>
 </html>
