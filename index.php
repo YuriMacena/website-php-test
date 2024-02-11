@@ -44,6 +44,12 @@
             padding: 8px 10px;
             text-align: center;
         }
+
+        p{
+            color: black;
+            margin-top: 10px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
