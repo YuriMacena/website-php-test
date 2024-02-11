@@ -36,9 +36,16 @@
     <header>
         <?php
             foreach ($pags as $key => $value){
-                echo '<a href"?page='.$key.'">'.$key.'</a>';
+                echo '<a href="?page='.$key.'">'.$key.'</a>';
             }
         ?>
     </header>
+    <section>
+        <h1><?php
+            $pag1 = (isset($_GET['page']) ? $_GET['page'] : 'home');
+
+            print $pag1;
+        ?></h1>
+    </section>
 </body>
 </html>
